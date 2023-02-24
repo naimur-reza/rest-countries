@@ -6,8 +6,9 @@ const loadMeals = (searchText) => {
 };
 
 const displayMils = meals => {
+  const mealsContainer = document.getElementById('meals-container')
+  mealsContainer.innerHTML = '';
   meals.forEach(meal => {
-    const mealsContainer = document.getElementById('meals-container')
     const newDiv = document.createElement('div');
     newDiv.classList.add('col');
     newDiv.innerHTML = `
@@ -33,3 +34,4 @@ const searchMeals = () => {
   console.log(searchField);
   loadMeals(searchField)
 }
+loadMeals('fish')
