@@ -29,8 +29,9 @@ const detailBtn = code =>{
 const showCountryDetail = data =>{
     const mainSection = document.getElementById('main-section')
     mainSection.innerHTML = `
-    <h1> ${data.name.common} </h1>
+    <h1>Name : ${data.name.common} </h1>
     <img src="${data.flags.png}" >
+    <h1>Region : ${data.region} </h1>
     `
     console.log(data);
 }
