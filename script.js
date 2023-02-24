@@ -21,6 +21,16 @@ const functionCall = countries => {
 
 const detailBtn = code =>{
     const url = `https://restcountries.com/v3.1/alpha/${code}`
-    console.log(url);
+    fetch(url)
+    .then(res => res.json())
+    .then(data => showCountryDetail(data[0]))
+}
+
+const showCountryDetail = data =>{
+    const mainSection = document.getElementById('main-section')
+    mainSection.innerHTML = `
+    <img src="${data.flags.png}" >
+    `
+    console.log(data);
 }
 countryLoad()
