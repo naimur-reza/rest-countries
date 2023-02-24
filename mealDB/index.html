@@ -11,24 +11,50 @@
 
     <body>
         <header>
-
+            <div class="d-flex justify-content-around align-items-center  py-2 bg-dark">
+                <div><h1 class="display-5 text-white">Make Your Breakfast</h1></div>
+              <div>
+                <input class="py-2 px-3 border-0 rounded-2" type="text" placeholder="Search" name="" id="search-field">
+                <button onclick="searchMeals()" id="btn-search" class="btn-secondary btn py-2 px-4">Search</button>
+              </div>
+            </div>
         </header>
-   
+
         <main>
-                 <!-- Search Container -->
-        <section >
-            <div class="d-flex justify-content-center align-content-center gap-2 py-2 bg-dark">
-                <input  class="p-1 border-0" type="text" placeholder="Search" name="" id="search-field">
-                <button onclick="searchMeals()" id="btn-search" class="btn-secondary btn">Search</button>
-            </div>
-        </section>
-            <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
-            </div>
+            <!-- Search Container -->
+            <section class="container mt-2">
+          
+                <div id="meals-container" class="row row-cols-1 row-cols-md-3 g-4">
+                </div>
+            </section>
+
+
+            <!-- Modal -->
+<!-- Modal -->
+<div class="modal fade" id="mealsModal" tabindex="-1" role="dialog" aria-labelledby="mealsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mealsModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div id="mealDetailsBody" class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary">Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
         </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-            crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="js/script.js"></script>
     </body>
 
