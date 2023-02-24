@@ -5,7 +5,17 @@ const countryLoad = () =>{
 }
 
 const functionCall = countries => {
-    countries.forEach()
+    const divContainer = document.getElementById('div-container')
+    countries.forEach(country => {
+        console.log(country.capital);
+        const newDiv = document.createElement('div');
+        newDiv.innerHTML = `
+        <h3>Name : ${country.name.common} </h3>
+        <h3>Official-Name : ${country.name.official} </h3>
+        <p>Capital-Name : ${country.capital ? country.capital[0] : 'No-Capital'} </p>
+        `
+        divContainer.appendChild(newDiv)
+    })
 }
 
 countryLoad()
